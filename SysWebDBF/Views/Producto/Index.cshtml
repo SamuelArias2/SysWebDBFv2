@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SysWebDBF.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@item.Nombre</h5>
+            <p class="card-text">@item.Descripcion</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+}
+
